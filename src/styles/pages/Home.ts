@@ -2,6 +2,8 @@
  * IMPORTS
  */
 import styled from 'styled-components';
+import {ThemeProps} from 'styled-components';
+import {DefaultTheme} from 'styled-components';
 
 
 /**
@@ -13,6 +15,13 @@ export const Container = styled.main`
     height: 100vh;
     overflow: hidden;
     width: 100%;
+
+    @media (max-width: 642px)
+    {
+        align-items: flex-start;
+        position: relative;
+        background-color: #130525;
+    }
 `;
 
 export const ContentContainer = styled.div`
@@ -36,9 +45,10 @@ export const ContentContainer = styled.div`
 
     @media (max-width: 642px)
     {
-        background: ${({theme}) => theme.colors.backgroundGradient}, url('/images/source.png') no-repeat;
+        background: ${({theme}) => theme.colors.backgroundGradient}, url('/images/mobile.png') no-repeat;
         background-size: cover;
         background-position: center;
+        height: 50%;
     }
 `;
 
@@ -51,6 +61,11 @@ export const ErrorMessage = styled.p`
     line-height: 48px;
     margin-left: 20px;
     margin-top: 8px;
+
+    @media (max-width: 642px)
+    {
+        margin-bottom: 0px;
+    }
 `;
 
 export const ForgotContainer = styled.p`
@@ -104,7 +119,9 @@ export const Form = styled.form`
         width: 311px;
         height: 357px;
         border-radius: 8px;
-        position: relative;
+        position: absolute;
+
+        top: 139px;
 
         justify-content: center;
 
@@ -121,7 +138,7 @@ export const Form = styled.form`
 `;
 
 export const ImageContainer = styled.div`
-    background-color: ${({theme}) => theme.colors.primaryGradient};
+    background-color: ${({theme}: ThemeProps<DefaultTheme>) => theme.colors.primaryGradient};
     display: flex;
     height: 100%;
     overflow: hidden;
@@ -149,7 +166,13 @@ export const InputContainer = styled.div`
     align-items: flex-start;
     display: flex;
     flex-direction: column;
-    margin-bottom: 8px;
+    
+    @media (max-width: 642px)
+    {
+        margin-bottom: 8px;
+        box-sizing: border-box;
+        max-height: 109px;
+    }
 `;
 
 export const InputTitle = styled.label`
@@ -212,7 +235,7 @@ export const Title = styled.h1`
         font-size: 24px;
         height: 64px;
         line-height: 32px;
-        margin-top: -16px;
+        justify-self: center;
         text-align: center;
         width: 139px;
     }
