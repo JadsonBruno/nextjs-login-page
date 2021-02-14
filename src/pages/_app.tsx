@@ -2,6 +2,7 @@
  * IMPORTS
  */
 import {ThemeProvider} from 'styled-components';
+import Head from 'next/head';
 import GlobalStyles from '../styles/global';
 import {Provider} from 'react-redux';
 import reducers from '../aggregates/index';
@@ -23,6 +24,9 @@ const store = Store.create(reducer);
 export default function MyApp({ Component, pageProps }) {
   return (
     <Provider store={store}>
+      <Head>
+        <title>Wiser Login</title>
+      </Head>
       <GlobalStyles />
       <ThemeProvider theme={theme}>
         <Component {...pageProps} />
