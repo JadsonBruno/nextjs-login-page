@@ -12,7 +12,7 @@ import {ReducersMapObject} from 'redux';
 import {Store as IStore} from 'redux';
 import {StoreEnhancer} from 'redux';
 import {Unsubscribe} from 'redux';
-import {IAppState} from '../aggregates/index';
+import {IAppState} from '../aggregates/index.d';
 
 
 /**
