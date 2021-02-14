@@ -2,12 +2,13 @@
  * IMPORTS
  */
 import {createGlobalStyle} from 'styled-components';
+import {DefaultTheme} from 'styled-components';
 
 
 /**
  * EXPORTS
  */
-export const theme = {
+export const theme: DefaultTheme = {
     colors: {
         primary: '#FAF5FF',
         backgroundGradient: 'linear-gradient(0, #130525 0%, rgba(105, 57, 153, 0) 100%)',
