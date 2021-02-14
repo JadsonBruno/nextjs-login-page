@@ -36,3 +36,14 @@ Run the following command in order to start the application in a development env
 ```yarn dev```
 
 Now you can access http://localhost:3000/ to see the login page.
+
+## Usage
+
+You can use the following user to make login at the app:
+
+```
+e-mail: teste@gmail.com
+password: senhaboa
+```
+
+or, if you prefer, go to https://6027175cdd4afd001754a56e.mockapi.io/wiser/user and see available users.
