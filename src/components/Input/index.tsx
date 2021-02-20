@@ -39,6 +39,7 @@ function Input (
     return (
         <Container
             isValid={isValid}
+            data-testid="input-field"
         >
             <input
                 type={INPUT_TYPE_DICTIONARY[type]}
@@ -48,6 +49,7 @@ function Input (
             />
             {(isValid !== undefined && isValid === false) &&
                 <Icon
+                    data-testid="input-icon-error"
                     src="/images/x.svg"
                 />
             }

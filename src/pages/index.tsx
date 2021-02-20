@@ -7,7 +7,7 @@ import {useState} from 'react';
 import {useSelector} from 'react-redux';
 import {useRouter} from 'next/router';
 import * as userAPI from '../aggregates/user/api';
-import {Button} from '../components/Button';
+import Button from '../components/Button';
 import Input from '../components/Input';
 import * as Styles from '../styles/pages/Home';
 import validateEmail from '../validators/email';
@@ -35,12 +35,12 @@ function Home()
   const [password, setPassword] = useState<string>('');
 
   // get isAuthorized flag from state
-  const isAuthorized = useSelector((state: IAppState) => state.user.isAuthorized);
+  const {isAuthorized} = useSelector((state: IAppState) => state.user);
 
-  const isAuthorizing = useSelector((state: IAppState) => state.user.isAuthorizing);
+  const {isAuthorizing} = useSelector((state: IAppState) => state.user);
 
   // get login erros from state
-  const loginError = useSelector((state: IAppState) => state.user.loginError);
+  const {loginError} = useSelector((state: IAppState) => state.user);
 
   // get router instance
   const router = useRouter();
