@@ -14,11 +14,12 @@ import {IButtonProps} from './index.d';
 /**
  * CODE
  */
-export function Button ({isLoading,...props}: IButtonProps): JSX.Element
+export default function Button ({isLoading,...props}: IButtonProps): JSX.Element
 {
     return (
         <Container
             {...props}
+            data-testid="submit-button"
         >
             {isLoading === false ?
                 <>ENTRAR</>

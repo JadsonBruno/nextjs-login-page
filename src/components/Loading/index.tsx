@@ -17,7 +17,9 @@ import * as Styles from './styles';
 function Loading (): JSX.Element
 {
     return (
-        <Styles.Container>
+        <Styles.Container
+            data-testid="loading-icon"
+        >
             <AiOutlineLoading className="fa-spin" />
         </Styles.Container>
     );
