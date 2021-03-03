@@ -1,4 +1,4 @@
-# Wiser Login Test
+# NextJS Login Page
 
 This app provide a login page. It is done with:
 
