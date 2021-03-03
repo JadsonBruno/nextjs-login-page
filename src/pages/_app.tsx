@@ -25,7 +25,7 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <Provider store={store}>
       <Head>
-        <title>Wiser Login</title>
+        <title>NextJS Login</title>
       </Head>
       <GlobalStyles />
       <ThemeProvider theme={theme}>
